@@ -1,0 +1,52 @@
+Specifications for the Sample DataBase Manager application
+
+This application is intended to provide for sample management and data management and analysis.
+These capabilities are provided through the creation of databases and python scripts to store and manipulate the information.
+SQL databases are used to store and retrieve information as directed by the user.  Direct manipulation of the databases is not necessary.
+Python scripts are used to manipulate the sample and data information for analysis, visualization, and management.
+
+
+Planned abilities:
+01. Sample tracking
+    01.01: Create samples indivudally or in batchees
+    01.02: Assign unique IDs to new samples
+    01.03: Update existing samples
+    01.04: Retrieve all related information
+02. Sample test planning
+    02.01: Manage sample-project tests
+    02.02: Mark test status
+    02.03: Access data files
+03. Sample management
+    03.01: Set sample status
+    03.02: Set sample location/state
+    03.03: Create notes
+04. Data importation
+    04.01: Import ASCII data (csv, txt, xls, etc)
+        04.01.01: Import data into selected databases
+        04.01.02: Initially only very simple formats to be supported, more complex formats to be added as needed
+        04.01.03: Eventualy, if possible, would like to allow users to define patterns for recognizing and importing complex formatting
+    04.02: Import binary data (e.g. pdfs)
+        04.02.01: Unless a library exists to read the binary format, allow user to attach the binary file to the sample and allow for manual entry of data
+        04.02.02: If a library exists to read the binary, then allow for importation of the ASCII portions (this likely falls under 04.01.03)
+05. Data analysis
+    05.01: Calculate simple summary statistics (Ave, SD. etc)
+    05.02: Calculate simple relationships between two "columns" (Correlation, linear regression)
+    05.03: Add additional functionallity as needed
+06. Data visualization
+    06.01: Create well formatted tables for display
+    06.02: Create well formatted 2D graphs (multiple data sets, 1 y axis)
+    06.03: Create well formatted 2D graphs (multiple data sets, 2 y axes)
+07. Project tracking (future)
+    07.01: Create new projects
+    07.02: Update existing projects
+    07.03: Associate data types with projects
+    07.04: (Set project tasks)
+08. Define program behavior (future)
+    08.01: Change settings
+    08.02: Create data categories
+    08.03: Update exisiting data categories
+    08.04: Change data storage scheme
+09. 
+10.
+
+Raw data files and related documents can be imported and are managed through a folder system.
