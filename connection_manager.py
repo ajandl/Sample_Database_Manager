@@ -22,7 +22,7 @@ with ConnectionManager(db_path) as con:
     cur = con.cursor()
     table_sql = '''CREATE TABLE IF NOT EXISTS Table1 (
                     ID INTEGER PRIMARY KEY,
-                    Title VARCHAR(50)'''
+                    Title VARCHAR(50))'''
     cur.execute(table_sql)
     cur.execute('''INSERT INTO Table1 
                     VALUES (?, ?)''', (None, 'Other Title...'))
