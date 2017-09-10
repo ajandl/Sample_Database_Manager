@@ -12,7 +12,7 @@ SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
 print(SCRIPT_PATH)
 
 # Set path for default DB file
-DEFAULT_DB = os.path.join(SCRIPT_PATH, 'DummyDB', 'DummyDB3.db')
+DEFAULT_DB = os.path.join(SCRIPT_PATH, 'DummyDB', 'DummyDB1.db')
 print(DEFAULT_DB)
 
 
@@ -33,7 +33,27 @@ def connect_db(db_file):
         print("Error {0}:".format(err.args[0]))
 
 
+def menu_main():
+    """
+    Displays main menu and allows selection from it.
+
+    No parameters or return
+    """
+
+    print("\nMain menu:")
+    print("-------------\n")
+    print("1. Create table in database")
+    print("2. Enter data into table")
+    print("3. Get data from table")
+    input("Enter number of selection: ")
+
+
 def main():
+    """
+    Executes main function
+
+    No parameters.
+    """
 
     user_db = input("Provide full file path for database or enter 'default': ")
 
