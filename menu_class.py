@@ -27,10 +27,42 @@ class Menus(object):
         """
         Adds option to current menu
 
-        Options are stored in a dictionary keyed with the option_number. The values are tuples with (option_title, option_function)
+        Options are stored in a dictionary keyed with the option_number.
+        The values are tuples with (option_title, option_function)
+
+        option_number [int] : Integer assigned for the option, also used as a \
+                              key in the options dict.
+
+        option_title [str] : Description of menu option, i.e. Open Database
+
+        option_function [function] : function or method associated with this \
+                                     option.
+
+        return None
         """
         current_options = []
-        for elem in self.options.values:
+        for elem in self.options.values():
             current_options.append = elem[0]
-            
-        pass
+
+        if option_number in self.options.keys():
+            raise Exception("This option number has already been assigned. \
+                             Use another number for the option.")
+        elif option_title in current_options:
+            raise Exception("This option title has alreayd been used. \
+                             Use another option title.")
+        else:
+            self.options[option_number] = (option_title, option_function)
+
+        return None
+
+
+    def get_option(self, selected_option):
+        """
+        Returns function associated with the selected option
+
+        selected_option [int] : Key value associated with desired option
+
+        return [function] : Returns function or method of the selected option
+        """
+        option_tuple = self.options[selected_option]
+        return option_tuple[1] 
