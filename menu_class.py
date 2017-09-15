@@ -15,7 +15,7 @@ class Menus(object):
 
     def __init__(self, menu_title):
         self.title = menu_title
-        self.options = []
+        self.options = {}
 
 
     def __str__(self):
@@ -23,10 +23,14 @@ class Menus(object):
         pass
 
 
-    def add_option(self, option_name):
+    def add_option(self, option_number, option_title, option_function):
         """
         Adds option to current menu
 
-        Need to decide how to store option name, corresponding option fucntion, and option number
+        Options are stored in a dictionary keyed with the option_number. The values are tuples with (option_title, option_function)
         """
+        current_options = []
+        for elem in self.options.values:
+            current_options.append = elem[0]
+            
         pass

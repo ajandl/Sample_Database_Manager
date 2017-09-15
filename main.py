@@ -45,7 +45,7 @@ def menu_main():
     print("1. Create table in database")
     print("2. Enter data into table")
     print("3. Get data from table")
-    input("Enter number of selection: ")
+    choice = input("Enter number of selection: ")
 
 
 def main():
@@ -67,3 +67,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    menu_main()
