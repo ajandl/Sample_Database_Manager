@@ -20,7 +20,13 @@ class Menus(object):
 
     def __str__(self):
         """ Defines print styling for menus """
-        pass
+
+        print(menu_title)
+        print('-'*len(menu_title), \n)
+
+        for el in self.options.keys:
+            print(el+'.', self.options[el][0])
+        
 
 
     def add_option(self, option_number, option_title, option_function):
@@ -65,4 +71,21 @@ class Menus(object):
         return [function] : Returns function or method of the selected option
         """
         option_tuple = self.options[selected_option]
-        return option_tuple[1] 
+        return option_tuple[1]
+
+
+    def remove_option(self, selected_option):
+        """
+        Remove the selected option from the options dictionary
+
+        selected_option [int] : Key value associated with desired option
+
+        return None
+        """
+
+        if selected_option in self.options:
+            del self.options[selected_option]
+        else:
+            raise Exception("The option to be removed is not in this menu. \
+                             Select an option between 1 and \
+                             {0}".format(len(self.options)+1))

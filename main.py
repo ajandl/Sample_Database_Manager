@@ -6,6 +6,7 @@ Defines necessary funcitons, classes, and manages program flow as required.
 
 import sqlite3
 import os
+from menu_class import Menus
 
 # Get path for current script
 SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
