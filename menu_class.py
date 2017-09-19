@@ -20,7 +20,16 @@ class Menus(object):
 
     def __str__(self):
         """ Defines print styling for menus """
-        pass
+
+        str_to_print = ""
+
+        str_to_print += self.title + '\n'
+        str_to_print += '-'*len(self.title) + '\n'
+
+        for elem in range(1, len(self.options)+1):
+            str_to_print += str(elem) + '. ' + self.options[elem][0] +'\n'
+        
+        return str_to_print
 
 
     def add_option(self, option_number, option_title, option_function):
@@ -65,4 +74,4 @@ class Menus(object):
         return [function] : Returns function or method of the selected option
         """
         option_tuple = self.options[selected_option]
-        return option_tuple[1] 
+        return option_tuple[1]
