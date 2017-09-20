@@ -73,8 +73,9 @@ class Menus(object):
 
         return [function] : Returns function or method of the selected option
         """
-        option_tuple = self.options[selected_option]
-        return option_tuple[1]
+        # option_tuple = self.options[selected_option]
+        # return option_tuple[1]
+        return self.options[selected_option][1]
 
 
     def remove_option(self, selected_option):
