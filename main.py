@@ -6,6 +6,7 @@ Defines necessary funcitons, classes, and manages program flow as required.
 
 import sqlite3
 import os
+from menu_class import Menus
 
 # Get path for current script
 SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -45,7 +46,7 @@ def menu_main():
     print("1. Create table in database")
     print("2. Enter data into table")
     print("3. Get data from table")
-    input("Enter number of selection: ")
+    choice = input("Enter number of selection: ")
 
 
 def main():
@@ -67,3 +68,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    menu_main()
