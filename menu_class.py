@@ -51,7 +51,7 @@ class Menus(object):
         """
         current_options = []
         for elem in self.options.values():
-            current_options.append = elem[0]
+            current_options.append(elem[0])
 
         if option_number in self.options.keys():
             raise Exception("This option number has already been assigned. \
