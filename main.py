@@ -33,20 +33,20 @@ def connect_db(db_file):
     except sqlite3.Error as err:
         print("Error {0}:".format(err.args[0]))
 
+""" Old main_menu """
+# def menu_main():
+#     """
+#     Displays main menu and allows selection from it.
 
-def menu_main():
-    """
-    Displays main menu and allows selection from it.
+#     No parameters or return
+#     """
 
-    No parameters or return
-    """
-
-    print("\nMain menu:")
-    print("-------------\n")
-    print("1. Create table in database")
-    print("2. Enter data into table")
-    print("3. Get data from table")
-    choice = input("Enter number of selection: ")
+#     print("\nMain menu:")
+#     print("-------------\n")
+#     print("1. Create table in database")
+#     print("2. Enter data into table")
+#     print("3. Get data from table")
+#     choice = input("Enter number of selection: ")
 
 
 def main():
