@@ -33,6 +33,41 @@ def connect_db(db_file):
     except sqlite3.Error as err:
         print("Error {0}:".format(err.args[0]))
 
+
+def create_table(targetDB, table_title):
+    """
+    Creates a  table in the target database
+
+    targetDB : Connection object to target database
+
+    table_title [str] : Title of the new database
+
+    return None
+    """
+    pass
+
+
+def enter_data(target_table):
+    """
+    Creates a new record in the target table
+
+    Prompts user for input for each field in the table.
+
+    This is an inefficient way to enter data, eventually the program should 
+    support importing from csv or xlsx files.
+
+    target_table : 
+    pass
+
+
+def get_data():
+    pass
+
+
+def rtn_to_main():
+    pass
+
+
 """ Old main_menu """
 # def menu_main():
 #     """
@@ -47,6 +82,12 @@ def connect_db(db_file):
 #     print("2. Enter data into table")
 #     print("3. Get data from table")
 #     choice = input("Enter number of selection: ")
+
+main_menu = Menus("Main Menu")
+main_menu.add_option(1, "Create new table", create_table)
+main_menu.add_option(2, "Enter data to table", enter_data)
+main_menu.add_option(3,"Get data from table", get_data)
+
 
 
 def main():
@@ -68,4 +109,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-    menu_main()
+    print(main_menu)
+
