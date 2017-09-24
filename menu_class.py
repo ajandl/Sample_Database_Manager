@@ -49,6 +49,7 @@ class Menus(object):
 
         return None
         """
+
         current_options = []
         for elem in self.options.values():
             current_options.append = elem[0]
@@ -57,7 +58,7 @@ class Menus(object):
             raise Exception("This option number has already been assigned. \
                              Use another number for the option.")
         elif option_title in current_options:
-            raise Exception("This option title has alreayd been used. \
+            raise Exception("This option title has already been used. \
                              Use another option title.")
         else:
             self.options[option_number] = (option_title, option_function)
@@ -73,8 +74,7 @@ class Menus(object):
 
         return [function] : Returns function or method of the selected option
         """
-        # option_tuple = self.options[selected_option]
-        # return option_tuple[1]
+
         return self.options[selected_option][1]
 
 
