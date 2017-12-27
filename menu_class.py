@@ -26,7 +26,7 @@ class Menus(object):
         str_to_print += self.title + '\n'
         str_to_print += '-'*len(self.title) + '\n'
 
-        for elem in range(1, len(self.options)+1):
+        for elem in self.options.keys():
             str_to_print += str(elem) + '. ' + self.options[elem][0] +'\n'
 
         return str_to_print
